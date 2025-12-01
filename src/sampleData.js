@@ -1,0 +1,121 @@
+export const sampleActivities = [
+  {
+    title: 'Coding Club',
+    category: 'Technology',
+    ageRange: '10-15',
+    description: 'Learn programming fundamentals with fun projects in Scratch and Python.',
+    longDescription: 'Join our Coding Club where students learn programming through exciting, hands-on projects. We explore Scratch for beginners and gradually introduce Python concepts. Perfect for building logical thinking and creativity.',
+    image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Sarah Johnson',
+    duration: '12 weeks',
+    price: 199,
+    schedule: 'Mondays 4:00 PM - 5:30 PM',
+    capacity: 20
+  },
+  {
+    title: 'Art & Crafts',
+    category: 'Creative Arts',
+    ageRange: '6-12',
+    description: 'Explore your creativity with painting, drawing, and crafting activities.',
+    longDescription: 'Our Art & Crafts program encourages creative expression through various mediums. Students will work with paints, pencils, clay, and recycled materials to create beautiful artwork.',
+    image: 'https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Michael Chen',
+    duration: '10 weeks',
+    price: 149,
+    schedule: 'Wednesdays 3:30 PM - 5:00 PM',
+    capacity: 15
+  },
+  {
+    title: 'Soccer Training',
+    category: 'Sports',
+    ageRange: '8-14',
+    description: 'Develop soccer skills through drills, games, and teamwork exercises.',
+    longDescription: 'Professional soccer training focusing on fundamental skills, teamwork, and sportsmanship. Includes fitness training, technical drills, and mini-games. Equipment provided.',
+    image: 'https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Coach Martinez',
+    duration: '14 weeks',
+    price: 179,
+    schedule: 'Fridays 4:00 PM - 5:30 PM',
+    capacity: 24
+  },
+  {
+    title: 'Robotics Workshop',
+    category: 'Technology',
+    ageRange: '11-16',
+    description: 'Build and program robots using LEGO Mindstorms and Arduino.',
+    longDescription: 'Learn robotics engineering by building functional robots. Students design, build, and program robots to complete challenges. No prior experience needed!',
+    image: 'https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Dr. Emily White',
+    duration: '16 weeks',
+    price: 249,
+    schedule: 'Tuesdays 4:30 PM - 6:00 PM',
+    capacity: 18
+  },
+  {
+    title: 'Dance Classes',
+    category: 'Performing Arts',
+    ageRange: '7-13',
+    description: 'Learn various dance styles including hip-hop, jazz, and contemporary.',
+    longDescription: 'Express yourself through dance! Students learn multiple dance styles with a focus on rhythm, coordination, and performance. Includes end-of-semester showcase.',
+    image: 'https://images.pexels.com/photos/3661329/pexels-photo-3661329.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Alicia Rodriguez',
+    duration: '12 weeks',
+    price: 169,
+    schedule: 'Thursdays 4:00 PM - 5:30 PM',
+    capacity: 16
+  },
+  {
+    title: 'Chess Club',
+    category: 'Academic',
+    ageRange: '8-16',
+    description: 'Master chess strategy, tactics, and compete in friendly matches.',
+    longDescription: 'Improve your chess skills with structured lessons covering openings, tactics, endgames, and tournament play. Open to all skill levels.',
+    image: 'https://images.pexels.com/photos/256133/pexels-photo-256133.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Grandmaster Lee',
+    duration: '10 weeks',
+    price: 129,
+    schedule: 'Mondays 5:00 PM - 6:30 PM',
+    capacity: 20
+  },
+  {
+    title: 'Science Lab',
+    category: 'Science',
+    ageRange: '9-14',
+    description: 'Hands-on experiments in chemistry, physics, and biology.',
+    longDescription: 'Explore the wonders of science through exciting hands-on experiments. From chemistry to physics, students conduct safe, engaging experiments and learn scientific principles.',
+    image: 'https://images.pexels.com/photos/3823036/pexels-photo-3823036.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Dr. James Park',
+    duration: '12 weeks',
+    price: 189,
+    schedule: 'Wednesdays 4:30 PM - 6:00 PM',
+    capacity: 12
+  },
+  {
+    title: 'Drama & Theater',
+    category: 'Performing Arts',
+    ageRange: '9-15',
+    description: 'Acting, improvisation, and theater production skills.',
+    longDescription: 'Discover the world of drama! Learn acting techniques, character development, stage presence, and prepare for a final performance showcase.',
+    image: 'https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Robert Davis',
+    duration: '14 weeks',
+    price: 199,
+    schedule: 'Tuesdays 4:00 PM - 5:30 PM',
+    capacity: 14
+  },
+  {
+    title: 'Piano Lessons',
+    category: 'Music',
+    ageRange: '7-15',
+    description: 'Learn to play piano from basic scales to simple songs.',
+    longDescription: 'Our piano lessons guide students from learning scales to playing complete songs. Suitable for beginners and intermediate learners.',
+    image: 'https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&h=350',
+    instructor: 'Carol Stevens',
+    duration: '12 weeks',
+    price: 180,
+    schedule: 'Saturdays 2:00 PM - 3:30 PM',
+    capacity: 15
+  }
+];
+
+export default sampleActivities;
