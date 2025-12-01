@@ -1,80 +1,75 @@
 // backend/server.js
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { MongoClient, ObjectId } from 'mongodb';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { MongoClient, ObjectId } from "mongodb";
 
-dotenv.config(); // Load .env variables
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors({ origin: '*' }));
+app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
+// MongoDB connection
 let db;
 const client = new MongoClient(process.env.MONGODB_URI);
 
 try {
   await client.connect();
-  db = client.db(process.env.MONGODB_DB);
-  console.log(`MongoDB Connected: ${db.databaseName}`);
+  db = client.db("learnhub"); // Coursework requires 1 DB with lesson + order
+  console.log("MongoDB connected");
 } catch (err) {
-  console.error('Failed to connect to MongoDB:', err);
+  console.error("MongoDB connection failed:", err);
   process.exit(1);
 }
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('Server is running. Go to /api/activities to see data.');
-});
+/* ========================
+   REQUIRED COURSEWORK ROUTES
+   ======================== */
 
-// API routes
-
-// Get all activities
-app.get('/api/activities', async (req, res) => {
+// 1️⃣ GET /lessons — Return all lessons
+app.get("/lessons", async (req, res) => {
   try {
-    const activities = await db.collection('activities').find().toArray();
-    res.json(activities);
+    const lessons = await db.collection("lesson").find().toArray();
+    res.json(lessons);
   } catch (err) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ error: "Failed to fetch lessons" });
   }
 });
 
-// Add new activity
-app.post('/api/activities', async (req, res) => {
+// 2️⃣ POST /orders — Save a new order
+app.post("/orders", async (req, res) => {
   try {
-    const result = await db.collection('activities').insertOne(req.body);
-    res.status(201).json({ ...req.body, _id: result.insertedId });
+    const result = await db.collection("order").insertOne(req.body);
+    res.status(201).json({ message: "Order created", id: result.insertedId });
   } catch (err) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ error: "Failed to create order" });
   }
 });
 
-// Update activity
-app.put('/api/activities/:id', async (req, res) => {
+// 3️⃣ PUT /lessons/:id — Update available spaces
+app.put("/lessons/:id", async (req, res) => {
   try {
-    const result = await db.collection('activities').updateOne(
+    const update = await db.collection("lesson").updateOne(
       { _id: new ObjectId(req.params.id) },
       { $set: req.body }
     );
-    if (result.matchedCount === 0) return res.status(404).json({ message: 'Activity not found' });
-    res.json({ message: 'Activity updated' });
+
+    if (update.matchedCount === 0) {
+      return res.status(404).json({ error: "Lesson not found" });
+    }
+
+    res.json({ message: "Lesson updated" });
   } catch (err) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ error: "Failed to update lesson" });
   }
 });
 
-// Delete activity
-app.delete('/api/activities/:id', async (req, res) => {
-  try {
-    const result = await db.collection('activities').deleteOne({ _id: new ObjectId(req.params.id) });
-    if (result.deletedCount === 0) return res.status(404).json({ message: 'Activity not found' });
-    res.json({ message: 'Activity deleted' });
-  } catch (err) {
-    res.status(500).json({ message: 'Server error' });
-  }
+// Root route
+app.get("/", (req, res) => {
+  res.send("Backend running. Visit /lessons to see all lessons.");
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
