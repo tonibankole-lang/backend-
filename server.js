@@ -172,9 +172,25 @@ app.put("/lessons/:id", async (req, res) => {
 app.post("/orders", async (req, res) => {
   try {
     const { name, phone, lessonIDs, numSpaces } = req.body;
+    
+    // Validate required fields
+    if (!name || !phone || !lessonIDs || !numSpaces) {
+      return res.status(400).json({ error: "Missing required fields: name, phone, lessonIDs, numSpaces" });
+    }
+    
+    // Validate name (letters only)
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
+      return res.status(400).json({ error: "Name must contain letters only" });
+    }
+    
+    // Validate phone (numbers only)
+    if (!/^[0-9]+$/.test(phone)) {
+      return res.status(400).json({ error: "Phone must contain numbers only" });
+    }
+    
     const order = {
-      name,
-      phone,
+      name: name.trim(),
+      phone: phone.trim(),
       lessonIDs,
       numSpaces,
       timestamp: new Date()
