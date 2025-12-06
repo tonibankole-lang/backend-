@@ -19,10 +19,13 @@ Express.js REST API for the LearnHub lesson booking system.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
+| `GET` | `/` | API info and available endpoints |
+| `GET` | `/health` | Health check (status, mode, timestamp) |
 | `GET` | `/lessons` | Get all lessons |
 | `GET` | `/lessons/:id` | Get single lesson by ID |
 | `PUT` | `/lessons/:id` | Update lesson (e.g., reduce spaces) |
 | `POST` | `/orders` | Create a new order |
+| `GET` | `/orders` | Get all orders (admin) |
 | `GET` | `/search?q=` | Search lessons by subject, location, price, spaces |
 | `GET` | `/images/:filename` | Serve static lesson images |
 
