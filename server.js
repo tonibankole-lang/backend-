@@ -284,4 +284,13 @@ app.get("/", (req, res) => {
   });
 });
 
+// Health check endpoint for monitoring
+app.get("/health", (req, res) => {
+  res.json({ 
+    status: "ok", 
+    mode: useLocalData ? "local" : "mongodb",
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
