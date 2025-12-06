@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Mathematics",
+    "location": "Room 101",
+    "price": 25,
+    "spaces": 5,
+    "image": "mathematics.jpg",
+    "icon": "fa-calculator"
+  },
+  {
+    "subject": "English Literature",
+    "location": "Room 102",
+    "price": 20,
+    "spaces": 8,
+    "image": "english.jpg",
+    "icon": "fa-book"
+  },
+  {
+    "subject": "Physics",
+    "location": "Science Lab A",
+    "price": 30,
+    "spaces": 6,
+    "image": "physics.jpg",
+    "icon": "fa-atom"
+  },
+  {
+    "subject": "Chemistry",
+    "location": "Science Lab B",
+    "price": 30,
+    "spaces": 5,
+    "image": "chemistry.jpg",
+    "icon": "fa-flask"
+  },
+  {
+    "subject": "Biology",
+    "location": "Science Lab C",
+    "price": 28,
+    "spaces": 7,
+    "image": "biology.jpg",
+    "icon": "fa-dna"
+  },
+  {
+    "subject": "History",
+    "location": "Room 201",
+    "price": 18,
+    "spaces": 10,
+    "image": "history.jpg",
+    "icon": "fa-landmark"
+  },
+  {
+    "subject": "Geography",
+    "location": "Room 202",
+    "price": 18,
+    "spaces": 9,
+    "image": "geography.jpg",
+    "icon": "fa-globe"
+  },
+  {
+    "subject": "Computer Science",
+    "location": "IT Lab 1",
+    "price": 35,
+    "spaces": 5,
+    "image": "computer-science.jpg",
+    "icon": "fa-laptop-code"
+  },
+  {
+    "subject": "Art & Design",
+    "location": "Art Studio",
+    "price": 22,
+    "spaces": 8,
+    "image": "art.jpg",
+    "icon": "fa-palette"
+  },
+  {
+    "subject": "Music",
+    "location": "Music Room",
+    "price": 25,
+    "spaces": 6,
+    "image": "music.jpg",
+    "icon": "fa-music"
+  },
+  {
+    "subject": "Physical Education",
+    "location": "Sports Hall",
+    "price": 15,
+    "spaces": 12,
+    "image": "physical-education.jpg",
+    "icon": "fa-running"
+  },
+  {
+    "subject": "French",
+    "location": "Room 301",
+    "price": 20,
+    "spaces": 7,
+    "image": "french.jpg",
+    "icon": "fa-language"
+  }
+]

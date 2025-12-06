@@ -1,0 +1,62 @@
+{
+  "mathematics.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Blackboard_at_the_University_of_Regensburg.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Wikimedia Commons"
+  },
+  "english.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Old_book_bindings.jpg",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  },
+  "physics.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Atom_orbitals.png",
+    "license": "CC BY-SA 3.0",
+    "author": "Wikimedia Commons"
+  },
+  "chemistry.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Chemistry_laboratory.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Wikimedia Commons"
+  },
+  "biology.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:DNA_double_helix.png",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  },
+  "history.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Ancient_Greek_temple.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Wikimedia Commons"
+  },
+  "geography.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:World_map.png",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  },
+  "computer-science.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Programming_code.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Wikimedia Commons"
+  },
+  "art.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Artist_palette.jpg",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  },
+  "music.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Music_notes.png",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  },
+  "physical-education.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Running_track.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Wikimedia Commons"
+  },
+  "french.jpg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower.jpg",
+    "license": "CC0 Public Domain",
+    "author": "Wikimedia Commons"
+  }
+}
