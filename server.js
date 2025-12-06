@@ -239,9 +239,33 @@ app.get("/search", async (req, res) => {
   }
 });
 
-// Root route
+// GET /orders — Return all orders (for testing/admin)
+app.get("/orders", async (req, res) => {
+  try {
+    if (useLocalData) {
+      return res.json(localOrders);
+    }
+    const orders = await db.collection("orders").find().toArray();
+    res.json(orders);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch orders" });
+  }
+});
+
+// Root route - API info
 app.get("/", (req, res) => {
-  res.json({ message: "LearnHub API running. Visit /lessons to see all lessons." });
+  res.json({
+    name: "LearnHub API",
+    version: "1.0.0",
+    endpoints: {
+      "GET /lessons": "Get all lessons",
+      "GET /lessons/:id": "Get single lesson",
+      "PUT /lessons/:id": "Update lesson",
+      "POST /orders": "Create order",
+      "GET /orders": "Get all orders",
+      "GET /search?q=": "Search lessons"
+    }
+  });
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
