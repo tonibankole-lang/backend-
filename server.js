@@ -1,4 +1,13 @@
-// backend/server.js
+/**
+ * LearnHub Backend API
+ * 
+ * Express.js REST API for the lesson booking system.
+ * Supports both MongoDB and in-memory data for development.
+ * 
+ * @author Tony
+ * @version 1.0.0
+ */
+
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
