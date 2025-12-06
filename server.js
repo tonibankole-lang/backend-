@@ -102,6 +102,12 @@ await connectDB();
    ======================== */
 app.get("/images/:filename", (req, res) => {
   const filename = req.params.filename;
+  
+  // Prevent directory traversal attacks
+  if (filename.includes('..') || filename.includes('/')) {
+    return res.status(400).json({ error: "Invalid filename" });
+  }
+  
   const imagePath = path.join(__dirname, "images", filename);
   
   if (fs.existsSync(imagePath)) {
