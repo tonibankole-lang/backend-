@@ -94,5 +94,13 @@
     "spaces": 7,
     "image": "french.jpg",
     "icon": "fa-language"
+  },
+  {
+    "subject": "Drama",
+    "location": "Theatre Hall",
+    "price": 22,
+    "spaces": 10,
+    "image": "drama.jpg",
+    "icon": "fa-theater-masks"
   }
 ]
