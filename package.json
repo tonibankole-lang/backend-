@@ -1,6 +1,8 @@
 {
   "name": "learnhub-backend",
   "version": "1.0.0",
+  "description": "Express.js REST API for LearnHub lesson booking system",
+  "author": "Tony",
   "main": "server.js",
   "type": "module",
   "scripts": {
