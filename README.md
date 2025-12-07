@@ -4,9 +4,9 @@ Express.js REST API for the LearnHub lesson booking system.
 
 ## 🔗 Links
 
-- **Live API**: `https://YOUR_RENDER_URL.onrender.com`
-- **All Lessons**: `https://YOUR_RENDER_URL.onrender.com/lessons`
-- **Frontend Repo**: [vue-frontend](https://github.com/YOUR_USERNAME/vue-frontend)
+- **Live API**: `https://backend-7lgl.onrender.com`
+- **All Lessons**: `https://backend-7lgl.onrender.com/lessons`
+- **Frontend Repo**: [frontend](https://github.com/tonibankole-lang/frontend)
 
 ## 🛠 Tech Stack
 
