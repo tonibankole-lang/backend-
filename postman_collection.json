@@ -1,0 +1,118 @@
+{
+  "info": {
+    "name": "LearnHub API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for LearnHub coursework API"
+  },
+  "item": [
+    {
+      "name": "Get all lessons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/lessons",
+          "host": ["{{baseUrl}}"],
+          "path": ["lessons"]
+        }
+      }
+    },
+    {
+      "name": "Get lesson by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/lessons/{{lessonId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["lessons", "{{lessonId}}"]
+        }
+      }
+    },
+    {
+      "name": "Search lessons",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/search?q=math",
+          "host": ["{{baseUrl}}"],
+          "path": ["search"],
+          "query": [
+            { "key": "q", "value": "math" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create order",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"1234567890\",\n  \"lessonIDs\": [\"local_1\"],\n  \"numSpaces\": [1]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "Update lesson spaces",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"spaces\": 4\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/lessons/{{lessonId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["lessons", "{{lessonId}}"]
+        }
+      }
+    },
+    {
+      "name": "Get all orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "lessonId",
+      "value": "local_1"
+    }
+  ]
+}
